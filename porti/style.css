@@ -4,6 +4,12 @@
   box-sizing: border-box;
 }
 
+body{
+  background: linear-gradient(90deg, #34d399, #a7f3d0, #e6fffb);
+  background-size: 300% 300%;
+  animation: color 5s ease-in-out infinite;
+}
+
 header {
   display: flex;
   flex-direction: row;
@@ -11,16 +17,12 @@ header {
   justify-content: space-between;
   padding: 10px;
   height: fit-content;
-  border: 2px solid red;
-  background: ;
 }
-
 .div-header {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  border: 1px solid yellow;
   margin-left: 500px;
 }
 
@@ -29,28 +31,140 @@ header {
   height: 90px;
   border-radius: 50%;
   align-items: center;
-  
 }
 
+.h1-nome{
+  padding-bottom: 20px;
+}
 .menu {
   display: flex;
   flex-direction: row;
-    gap: 15px;
-  border: 2px solid blue;
+  gap: 15px;
+  
 }
 
-.nav-opcao{
-    text-decoration: none;
-    color: black;
-    border: 2px solid black;
-    border-radius: 5px;
-    padding: 8px;
-    transition: 0.5s ease;
-    
+.nav-opcao {
+  border: 1px solid black;
+  text-decoration: none;
+  color: black;
+  border-radius: 5px;
+  padding: 8px;
+  transition: 0.5s ease;
 }
 
-.nav-opcao:hover{
-    transform: scale(1.1);
-    background-color: rgb(225, 216, 203);
+.nav-opcao:hover {
+  transform: scale(1.1);
+  background-color: rgb(225, 216, 203);
+}
+.descricao{
+  display: flex;
+  flex-direction: row;
+  margin-left: 20px;
+}
+.span1 {
+  color: green;
+}
+.span2 {
+  color: yellow;
+}
+.span3 {
+  color: red;
+}
+.p1 {
+  display: block;
+  text-align: start;
+  justify-content: center;
+}
+.lista {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+span {
+  color: purple;
+}
 
+.meus-projetos {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#sec-4 {
+  padding: 30px 20px;
+}
+
+.form form {
+  background-color: white;
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px #ccc;
+}
+
+.form label {
+  display: block;
+  margin-top: 15px;
+  margin-bottom: 5px;
+  font-weight: bold;
+  color: #333;
+}
+
+.form input,
+.form textarea,
+.form select {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+}
+
+.form textarea {
+  height: 100px;
+  resize: vertical;
+}
+
+.form input:focus,
+.form textarea:focus,
+.form select:focus {
+  outline: none;
+  border-color: #2878e3;
+}
+
+.form input[type="submit"] {
+  margin-top: 20px;
+  background-color: #2878e3;
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s;
+}
+
+.form input[type="submit"]:hover {
+  background-color: #155bb5;
+}
+
+footer{
+  background: white;
+  text-align: center;
+}
+
+@keyframes color {
+  0% {
+    background-position: 0 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0 50%;
+  }
 }

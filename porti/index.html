@@ -1,66 +1,95 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Meu Portifólio</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
     <header>
-        <div class="div-header">
-            <img src="./assets/cowboy.jpg" alt="dois cowboys" class="img">
-            <h1 class="h1-nome">@Eduardo e Alfonso</h1>
-        </div>
-        <nav class="menu">
-            <a href="#sec-1" class="nav-opcao">Início</a>
-            <a href="#sec-2" class="nav-opcao">Habilidades</a>
-            <a href="#sec-3" class="nav-opcao">Projetos</a>
-            <a href="#sec-4" class="nav-opcao">Contato</a>
-        </nav>
+      <div class="div-header">
+        <img src="./assets/cowboy.jpg" alt="dois cowboys" class="img" />
+        <h1 class="h1-nome">Eduardo e Alfonso</h1>
+      </div>
+      <nav class="menu">
+        <a href="#sec-1" class="nav-opcao">Início</a>
+        <a href="#sec-2" class="nav-opcao">Habilidades</a>
+        <a href="#sec-3" class="nav-opcao">Projetos</a>
+        <a href="#sec-4" class="nav-opcao">Contato</a>
+      </nav>
     </header>
-    <br>
-    <br>
     <main>
-        <section id="sec-1">
-            <div>
-                <!--<h1 class="h1">Eduardo Alfonso</h1> -->
-                <p class="p1">Me chamo Eduardo Alfonso, tenho 25 anos e sou natural do <span class="span1">Rio </span><span class="span2">Grande </span><span class="span3">do Sul</span>. Sou estudante de Desenvolvimento de Sistemas e estou começando minha caminhada na área de tecnologia. Atualmente, estou aprendendo programação e desenvolvendo meus primeiros projetos. Aqui compartilho um pouco do que venho estudando e construindo.</p>
-            </div>
-        </section>
-        <section id="sec-2">
-            <div>
-                <ul>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                </ul>
-            </div>
-        </section>
-        <section id="sec-3">
-                <div>
-                    <h3> </h3>
-                    <p></p>
-                    <a href=""></a>
-                </div>
-        </section>
-        <section id="sec-4">
-            <div>
-                <form action="">
-
-
-
-
-                </form>
-
-
-            </div>
-        </section>
+      <section id="sec-1">
+        <div class="descricao">
+          <!--<h1 class="h1">Eduardo Alfonso</h1> -->
+          <p class="p1">
+            Me chamo Eduardo Alfonso, tenho 25 anos e sou natural do
+            <span class="span1">Rio </span><span class="span2">Grande </span
+            ><span class="span3">do Sul</span>. Sou estudante de Desenvolvimento
+            de Sistemas e estou começando minha caminhada na área de tecnologia.
+            Atualmente, estou aprendendo programação e desenvolvendo meus
+            primeiros projetos. Aqui compartilho um pouco do que venho estudando
+            e construindo.
+          </p>
+        </div>
+      </section>
+      <section id="sec-2">
+        <div>
+          <ul class="lista">
+            <h3>Sobre Mim</h3>
+            <li>
+              <span>Velocidade</span> - Mover-se em velocidades sobre-humanas.
+            </li>
+            <li><span>Superforça</span> - Possuir força extraordinária.</li>
+            <li>Invisibilidade - Ficar invisível aos olhos dos outros.</li>
+            <li>
+              <span>Teletransporte</span> - Deslocar-se instantaneamente de um
+              lugar para outro.
+            </li>
+            <li>Telecinese - Mover objetos com o poder da mente.</li>
+          </ul>
+        </div>
+      </section>
+      <section id="sec-3">
+        <div class="meus-projetos">
+          <h3>Meus Projetos</h3>
+          <p>
+            Meus primeiros passos em Desenvolvimento de Sistemas com alguns
+            projetos básicos.
+          </p>
+          <a href="https://github.com/EduardoAlfonsoDev" class="link-pessoal"
+            >Me encontre aqui</a
+          >
+        </div>
+      </section>
+      <section id="sec-4">
+        <div class="form">
+            <form action="#" method="post">
+                <label for="nome">Nome:</label>
+                <input type="text" id="nome" name="nome" required />
+            
+                <label for="email">E-mail:</label>
+                <input type="email" id="email" name="email" required />
+            
+                <label for="mensagem">Mensagem:</label>
+                <textarea id="mensagem" name="mensagem" required></textarea>
+            
+                <label for="conheceu">Como nos conheceu?</label>
+                <select id="conheceu" name="conheceu" required>
+                    <option value="">Selecione uma opção</option>
+                    <option value="google">Google</option>
+                    <option value="redes-sociais">Redes sociais</option>
+                    <option value="indicacao">Indicação de amigos</option>
+                </select>
+            
+                <input type="submit" value="Enviar" />
+            </form>
+        </div>
+      </section>
     </main>
     <footer>
-        <p>        </p>
+      <p>Todos direitos reservados.</p>
     </footer>
-</body>
+  </body>
 </html>
