@@ -1,0 +1,627 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #262626;
+    background-color: #fafafa;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+#container {
+    display: flex;
+    min-height: 100vh;
+}
+
+aside {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 250px;
+    height: 100vh;
+    padding: 20px 15px;
+    background-color: #fff;
+    border-right: 1px solid #dbdbdb;
+    overflow-y: auto;
+    z-index: 100;
+}
+
+#div-logo {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px;
+}
+
+#div-logo h1 {
+    font-family: cursive;
+    font-size: 25px;
+}
+
+#div-perfil {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+    padding: 25px 0;
+    border-bottom: 1px solid #dbdbdb;
+}
+
+#foto-perfil,
+.foto-sugestao,
+.foto-stories,
+.perfil-publi,
+.perfil-comentario {
+    background-size: cover;
+    background-position: center;
+}
+
+#foto-perfil {
+    width: 100px;
+    height: 100px;
+    margin-bottom: 8px;
+    border: 3px solid palevioletred;
+    border-radius: 50%;
+    background-image: url(./assets/jungkook.jpg);
+}
+
+#div-perfil h2 {
+    font-size: 17px;
+}
+
+#div-perfil h3 {
+    color: #8e8e8e;
+    font-size: 13px;
+    font-weight: normal;
+}
+
+#div-stats {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+#div-posts,
+#div-seguidores,
+#div-seguindo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+}
+
+.stats-quantidade {
+    font-size: 14px;
+}
+
+.stats-titulo {
+    color: #8e8e8e;
+    font-size: 11px;
+}
+
+#div-sugestoes {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 25px;
+}
+
+#div-sugestoes h2 {
+    margin-bottom: 5px;
+    font-size: 15px;
+}
+
+.div-sugestoes {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    font-size: 12px;
+    justify-content: space-between;
+}
+
+.foto-sugestao {
+    width: 34px;
+    height: 34px;
+    min-width: 34px;
+    border: 2px solid palevioletred;
+    border-radius: 50%;
+}
+
+.div-sugestoes:nth-of-type(1) .foto-sugestao {
+    background-image: url(./assets/leosenac.jpg);
+}
+
+.div-sugestoes:nth-of-type(2) .foto-sugestao {
+    background-image: url(./assets/felip.jpg);
+}
+
+.div-sugestoes:nth-of-type(3) .foto-sugestao {
+    background-image: url(./assets/edubts.jpg);
+}
+
+.div-sugestoes:nth-of-type(4) .foto-sugestao {
+    background-image: url(./assets/brunomagic.jpg);
+}
+
+.div-sugestoes:nth-of-type(5) .foto-sugestao {
+    background-image: url(./assets/fiuzarato.jpg);
+}
+
+.sugestao-info {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+    min-width: 0;
+}
+
+.sugestao-info span {
+    color: #8e8e8e;
+    font-size: 11px;
+}
+
+.div-sugestoes > a {
+    margin-left: auto;
+    color: #0095f6;
+    font-weight: bold;
+}
+
+footer {
+    position: sticky;
+    bottom: 0;
+    margin-top: auto;
+    padding-top: 20px;
+    padding-bottom: 5px;
+    background-color: #fff;
+    border-top: 1px solid #dbdbdb;
+    z-index: 2;
+}
+
+#div-opcoes {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+#logoff,
+#settings {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+#logoff:hover,
+#settings:hover {
+    background-color: #f2f2f2;
+}
+
+.img-footer {
+    width: 20px;
+    height: 20px;
+}
+
+main {
+    flex: 1;
+    min-width: 0;
+    width: calc(100% - 250px);
+    margin-left: 250px;
+    padding: 20px 30px;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #dbdbdb;
+}
+
+#div-inicio,
+#div-direita {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+#div-inicio nav,
+#div-direita nav {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+nav img {
+    width: 25px;
+    height: 25px;
+    transition: 0.2s;
+}
+
+nav a:hover img {
+    transform: scale(1.1);
+}
+
+input {
+    min-width: 200px;
+    min-height: 35px;
+    padding: 8px 12px;
+    border: 1px solid #dbdbdb;
+    border-radius: 8px;
+    outline: none;
+    background-color: #efefef;
+    font-size: 13px;
+}
+
+input:focus {
+    background-color: #fff;
+    border-color: #dbdbdb;
+}
+
+#new-post {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 9px 15px;
+    border: none;
+    border-radius: 8px;
+    background-color: #0095f6;
+    color: #fff;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+#new-post img {
+    width: 20px;
+    height: 20px;
+    filter: brightness(0) invert(1);
+}
+
+#stories {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 28px;
+    margin: 20px 0;
+    padding: 20px;
+    border: 1px solid #dbdbdb;
+    border-radius: 10px;
+    background-color: #fff;
+}
+
+.div-stories {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+}
+
+.div-stories h3 {
+    font-size: 12px;
+    font-weight: normal;
+}
+
+.foto-stories {
+    width: 65px;
+    height: 65px;
+    border: 3px solid palevioletred;
+    border-radius: 50%;
+}
+
+.div-stories:nth-child(1) .foto-stories {
+    background-image: url(./assets/jhope.jpg);
+}
+
+.div-stories:nth-child(2) .foto-stories {
+    background-image: url(./assets/jimin.jpg);
+}
+
+.div-stories:nth-child(3) .foto-stories {
+    background-image: url(./assets/jin.jpg);
+}
+
+.div-stories:nth-child(4) .foto-stories {
+    background-image: url(./assets/rm.jpg);
+}
+
+.div-stories:nth-child(5) .foto-stories {
+    background-image: url(./assets/suga.jpg);
+}
+
+.div-stories:nth-child(6) .foto-stories {
+    background-image: url(./assets/v.jpg);
+}
+
+.publi {
+    display: flex;
+    width: 100%;
+    max-width: 1100px;
+    height: 70vh;
+    min-height: 500px;
+    margin: 25px auto;
+    overflow: hidden;
+    border: 1px solid #dbdbdb;
+    border-radius: 10px;
+    background-color: #fff;
+}
+
+.img-publi {
+    flex: 1.2;
+    min-width: 0;
+    min-height: 100%;
+    background-image: url(./assets/dogv.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.post-lucas .img-publi {
+    background-image: url(./assets/bts.jpg);
+}
+
+.post-ana .img-publi {
+    background-image: url(./assets/btskr.jpg);
+}
+
+.infos-publi {
+    display: flex;
+    flex: 0.8;
+    flex-direction: column;
+    min-width: 0;
+    min-height: 0;
+}
+
+.top-publi {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px;
+    border-bottom: 1px solid #dbdbdb;
+}
+
+.conjunto-publi {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.perfil-publi {
+    width: 40px;
+    height: 40px;
+    border: 2px solid palevioletred;
+    border-radius: 50%;
+    background-image: url(./assets/jungkook.jpg);
+}
+
+.nome-publi {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.nome-publi h4 {
+    font-size: 13px;
+}
+
+.nome-publi p {
+    color: #8e8e8e;
+    font-size: 11px;
+}
+
+.botao-opcoes {
+    border: none;
+    background: none;
+    font-size: 22px;
+    cursor: pointer;
+}
+
+.comentarios-publi {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    min-height: 0;
+    gap: 20px;
+    overflow-y: auto;
+    padding: 20px 15px;
+}
+
+.comentario-publi {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+}
+
+.perfil-comentario {
+    width: 32px;
+    height: 32px;
+    min-width: 32px;
+    border: 2px solid palevioletred;
+    border-radius: 50%;
+}
+
+.comentario-publi:nth-child(1) .perfil-comentario {
+    background-image: url(./assets/jimin.jpg);
+}
+
+.comentario-publi:nth-child(2) .perfil-comentario {
+    background-image: url(./assets/v.jpg);
+}
+
+.texto-comentario {
+    flex: 1;
+    min-width: 0;
+    font-size: 13px;
+    line-height: 1.5;
+    overflow-wrap: anywhere;
+}
+
+.texto-comentario span {
+    display: block;
+    margin-top: 5px;
+    color: #8e8e8e;
+    font-size: 11px;
+}
+
+.acoes-comentario {
+    display: flex;
+    gap: 15px;
+    margin-top: 5px;
+}
+
+.acoes-comentario a {
+    color: #8e8e8e;
+    font-size: 11px;
+    font-weight: bold;
+}
+
+.curtir-comentario img {
+    width: 15px;
+    height: 15px;
+}
+
+.interacoes-publi {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 15px;
+    border-top: 1px solid #dbdbdb;
+}
+
+.botoes-interacao,
+.save-publi {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.interacoes-publi img {
+    width: 25px;
+    height: 25px;
+}
+
+.detalhes-publi {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    padding: 5px 15px 12px;
+    font-size: 13px;
+}
+
+.detalhes-publi span {
+    color: #8e8e8e;
+    font-size: 11px;
+}
+
+.novo-comentario {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 12px 15px;
+    border-top: 1px solid #dbdbdb;
+}
+
+.emoji-comentario {
+    font-size: 22px;
+    cursor: pointer;
+}
+
+.novo-comentario input {
+    flex: 1;
+    min-width: 0;
+    border: none;
+    background: transparent;
+}
+
+.novo-comentario button {
+    border: none;
+    background: none;
+    color: #0095f6;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+@media (max-width: 1000px) {
+    aside {
+        width: 210px;
+    }
+
+    main {
+        width: calc(100% - 210px);
+        margin-left: 210px;
+        padding: 15px;
+    }
+
+    .publi {
+        height: auto;
+        flex-direction: column;
+    }
+
+    .img-publi {
+        min-height: 400px;
+    }
+
+    .infos-publi {
+        min-height: 400px;
+    }
+}
+
+@media (max-width: 700px) {
+    aside {
+        display: none;
+    }
+
+    main {
+        width: 100%;
+        margin-left: 0;
+        padding: 10px;
+    }
+
+    header {
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+
+    #div-inicio,
+    #div-direita {
+        flex-wrap: wrap;
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    #div-inicio input {
+        min-width: 120px;
+        width: 40%;
+    }
+
+    #stories {
+        justify-content: flex-start;
+        gap: 20px;
+        overflow-x: auto;
+    }
+
+    .div-stories {
+        min-width: 65px;
+    }
+
+    .publi {
+        margin-top: 15px;
+    }
+
+    .img-publi {
+        min-height: 300px;
+    }
+}
