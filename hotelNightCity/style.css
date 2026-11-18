@@ -1,0 +1,428 @@
+/* CONFIGURAÇÃO GERAL */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #08080d;
+    color: white;
+    font-family: Arial, sans-serif;
+}
+
+
+/* MENU */
+
+header {
+    height: 80px;
+    background-color: #08080d;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 0 8%;
+
+    border-bottom: 2px solid #00f0ff;
+
+    position: fixed;
+    top: 0;
+    width: 100%;
+
+    z-index: 10;
+}
+
+.logo {
+    color: #ff0055;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.logo span {
+    color: #00f0ff;
+}
+
+nav {
+    display: flex;
+    gap: 25px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+nav a:hover {
+    color: #00f0ff;
+}
+
+
+/* INÍCIO */
+
+.inicio {
+    min-height: 100vh;
+
+    display: flex;
+    align-items: center;
+
+    padding: 100px 8%;
+
+    background-image:
+        linear-gradient(
+            rgba(8, 8, 13, 0.55),
+            rgba(8, 8, 13, 0.9)
+        ),
+        url("https://images.unsplash.com/photo-1536599018102-9f803c140fc1?auto=format&fit=crop&w=1600&q=80");
+
+    background-size: cover;
+    background-position: center;
+}
+
+.texto-inicio {
+    max-width: 650px;
+}
+
+.pequeno,
+.titulo-pequeno {
+    color: #00f0ff;
+    font-size: 14px;
+    letter-spacing: 4px;
+    margin-bottom: 20px;
+}
+
+h1 {
+    font-size: 80px;
+    line-height: 0.9;
+    color: white;
+
+    text-shadow:
+        4px 4px 0px #ff0055;
+}
+
+.texto-inicio p {
+    margin: 25px 0;
+    line-height: 1.7;
+    max-width: 500px;
+}
+
+.botao {
+    display: inline-block;
+
+    padding: 15px 25px;
+
+    background-color: #ff0055;
+
+    color: white;
+
+    text-decoration: none;
+
+    font-weight: bold;
+
+    border: 2px solid #ff0055;
+}
+
+.botao:hover {
+    background-color: transparent;
+    color: #ff0055;
+}
+
+
+/* SEÇÕES */
+
+section {
+    padding: 100px 8%;
+}
+
+h2 {
+    font-size: 45px;
+    margin-bottom: 30px;
+}
+
+h2 span {
+    color: #00f0ff;
+}
+
+
+/* HOTEL */
+
+.hotel {
+    display: flex;
+    gap: 60px;
+    align-items: center;
+}
+
+.conteudo {
+    flex: 1;
+}
+
+.conteudo p:not(.titulo-pequeno) {
+    color: #bbb;
+    line-height: 1.8;
+    margin-bottom: 20px;
+}
+
+.imagem-hotel {
+    flex: 1;
+    height: 400px;
+
+    background-image: url("https://images.unsplash.com/photo-1531058020387-3be344556be6?auto=format&fit=crop&w=1000&q=80");
+
+    background-size: cover;
+    background-position: center;
+
+    border: 2px solid #ff0055;
+}
+
+
+/* QUARTOS */
+
+.quartos {
+    background-color: #0d0d15;
+}
+
+.cards {
+    display: flex;
+    gap: 25px;
+}
+
+.card {
+    flex: 1;
+
+    background-color: #11111c;
+
+    border: 1px solid #333;
+
+    padding-bottom: 25px;
+
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+    border-color: #00f0ff;
+}
+
+.foto {
+    height: 220px;
+
+    background-size: cover;
+    background-position: center;
+}
+
+.quarto1 {
+    background-image: url("https://images.unsplash.com/photo-1611892440504-42a792e24d32?auto=format&fit=crop&w=800&q=80");
+}
+
+.quarto2 {
+    background-image: url("https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=800&q=80");
+}
+
+.quarto3 {
+    background-image: url("https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=800&q=80");
+}
+
+.card h3,
+.card p {
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.card h3 {
+    color: #ff0055;
+    margin-top: 20px;
+}
+
+.card p {
+    color: #aaa;
+    line-height: 1.6;
+    margin-top: 15px;
+}
+
+.card .preco {
+    color: #00f0ff;
+    font-weight: bold;
+}
+
+.card button {
+    margin: 20px;
+
+    padding: 12px 20px;
+
+    background-color: #00f0ff;
+
+    border: none;
+
+    font-weight: bold;
+
+    cursor: pointer;
+}
+
+
+/* SERVIÇOS */
+
+.lista-servicos {
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 20px;
+}
+
+.lista-servicos div {
+    padding: 30px;
+
+    border: 1px solid #333;
+
+    background-color: #101018;
+}
+
+.lista-servicos h3 {
+    color: #ff0055;
+    font-size: 30px;
+}
+
+.lista-servicos p {
+    margin-top: 10px;
+    color: #bbb;
+}
+
+
+/* CONTATO */
+
+.contato {
+    background-color: #0d0d15;
+}
+
+form {
+    max-width: 600px;
+}
+
+label {
+    display: block;
+    margin-top: 20px;
+    margin-bottom: 8px;
+    color: #00f0ff;
+}
+
+input,
+textarea {
+    width: 100%;
+
+    padding: 12px;
+
+    background-color: #08080d;
+
+    border: 1px solid #444;
+
+    color: white;
+
+    font-size: 15px;
+}
+
+textarea {
+    height: 130px;
+    resize: vertical;
+}
+
+input:focus,
+textarea:focus {
+    outline: none;
+    border-color: #00f0ff;
+}
+
+form button {
+    margin-top: 20px;
+
+    padding: 15px 25px;
+
+    background-color: #ff0055;
+
+    color: white;
+
+    border: none;
+
+    font-weight: bold;
+
+    cursor: pointer;
+}
+
+
+/* RODAPÉ */
+
+footer {
+    padding: 30px 8%;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    border-top: 1px solid #333;
+
+    color: #777;
+
+    font-size: 13px;
+}
+
+footer span {
+    color: #00f0ff;
+}
+
+
+/* RESPONSIVIDADE */
+
+@media (max-width: 800px) {
+
+    header {
+        height: auto;
+
+        padding: 20px;
+
+        flex-direction: column;
+
+        gap: 15px;
+    }
+
+    nav {
+        gap: 12px;
+    }
+
+    nav a {
+        font-size: 12px;
+    }
+
+    h1 {
+        font-size: 55px;
+    }
+
+    h2 {
+        font-size: 35px;
+    }
+
+    .hotel {
+        flex-direction: column;
+    }
+
+    .imagem-hotel {
+        width: 100%;
+    }
+
+    .cards {
+        flex-direction: column;
+    }
+
+    .lista-servicos {
+        grid-template-columns: 1fr;
+    }
+
+    footer {
+        flex-direction: column;
+        gap: 15px;
+    }
+}
